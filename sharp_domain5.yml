@@ -1,0 +1,192 @@
+slots:
+  name:
+    type: text
+  nothave:
+    type: text
+  model:
+    type: text
+  size:
+    type: text
+  install_place:
+    type: text
+  install_wall_type:
+    type: text
+  phone:
+    type: text
+  buy_place:
+    type: text
+  date:
+    type: text
+  house_age:
+    type: text
+  province:
+    type: text
+  autonomous_prefecture:
+    type: text
+  city:
+    type: text
+  district:
+    type: text
+  village:
+    type: text
+  town:
+    type: text
+  road:
+    type: text
+  road_number:
+    type: text
+  community:
+    type: text
+  unit:
+    type: text
+  building:
+    type: text
+  floor:
+    type: text
+  side:
+    type: text
+  room:
+    type: text
+  address_other:
+    type: text
+  matches:
+    type: list
+
+intents:
+ - greet
+ - affirm
+ - deny
+ - inform
+ - thankyou
+ - request_info
+ - install
+ - tohome
+ - signal
+ - hanger
+
+entities:
+ - name
+ - nothave
+ - model
+ - size
+ - install_place
+ - install_wall_type
+ - phone
+ - buy_place
+ - date
+ - house_age
+ - province
+ - autonomous_prefecture
+ - city
+ - district
+ - village
+ - town
+ - road
+ - road_number
+ - community
+ - unit
+ - building
+ - floor
+ - side
+ - room
+ - address_other
+
+
+templates:
+  utter_greet:
+    - "您好，感谢您致电夏普公司，我姓刘，工号23023，很高兴为您服务，请讲。"
+  utter_default:
+    - "请询问跟夏普电视有关的信息。"
+  utter_ack:
+    - "好的。"
+  utter_ask_name:
+    - "好的,请问您贵姓啊？"
+  utter_ask_to_home:
+    - "请问您电视送到家了吗？"      
+  utter_ask_signal: 
+    - text: "家里的电视信号开通了吗？"
+      buttons:
+      - title: "开通了"
+        payload: "开通了"
+      - title: "还没开通"
+        payload: "还没开通"
+  utter_inform_no_signal:
+    - text: "呃是这样的。因为师傅上门安装电视是需要一个信号来调试的，没有信号的话就只能安装，不能调试啊。然后您看一下我这边的话是继续帮您预约呢还是。"
+  utter_ask_model:
+    - "您买的电视机型号是LCD-多少？"
+  utter_ask_size:
+    - "还记得是买了多大尺寸的电视吗？"
+  utter_ask_install_place:
+    - text: "您是要放桌上安装的还是要挂墙安装的呢？"
+      buttons:
+      - title: "放桌上"
+        payload: "放桌上"
+      - title: "挂墙上"
+        payload: "挂墙上"
+  utter_inform_desk_install:
+    - text: "台式安裝是要收取60元的。"
+  utter_inform_wall_install:
+    - text: "挂墙上的安装费加挂架费一共是一百四。"
+  utter_inform_wall_install_with_hanger:
+    - text: "有挂架是80。"
+  utter_ask_install_wall_type:
+    - text: "挂在墙上是有两种收费的，一种是简单固定型的是210元，另外一种是裝壁伸縮型可以微调的是550元，那您要选择哪一种呢？"
+      buttons:
+      - title: "简单固定型"
+        payload: "简单固定型-210元"
+      - title: "裝壁伸縮型"
+        payload: "裝壁伸縮型-550元"
+  utter_ask_install_date:
+    - "好的那現在為您預約，您看从明天开始哪天方便？"
+  utter_ask_contact_people:
+    - "师傅上门是联系您本人对吗？"
+  utter_ask_phone:
+    - "您的联系电话可以报一下吗？我们这边看不到的。"
+  utter_ask_address:
+    - "您的安装地址是哪里呢？"
+  utter_ask_other_address:
+    - "然后呢？"
+  utter_ask_buy_date:
+    - "请问您的电视机是什么时间购买的呢？"
+  utter_ask_buy_place:
+    - "请问您的电视机是在哪里购买的呢？"
+  utter_ask_buy_date_place:
+    - "请问一下您的电视机是什么时候在哪个商店购买的？"
+  utter_ask_house_age:
+    - text: "那请问您的电视是在新房子使用的吗？"
+      buttons:
+      - title: "老房子"
+        payload: "老房子"
+      - title: "新房子"
+        payload: "新房子"
+  utter_ask_helpmore:
+    - "谢谢您的配合，在师傅上门之前请不要自行开箱，并准备好购机发票。请问还有什么可以帮您？"
+  utter_goodbye:
+    - "好的，谢谢您的配合，如果还有其他需要帮助的，请随时联系我们感谢您的来电，麻烦稍后对我服务做个评价，祝您生活愉快，再见。"
+
+actions:
+  - utter_greet
+  - utter_default
+  - utter_ack
+  - utter_ask_name
+  - utter_ask_to_home    
+  - utter_ask_signal
+  - utter_inform_no_signal
+  - utter_ask_model
+  - utter_ask_size
+  - utter_ask_install_place
+  - utter_inform_desk_install
+  - utter_inform_wall_install
+  - utter_inform_wall_install_with_hanger
+  - utter_ask_install_wall_type
+  - utter_ask_install_date
+  - utter_ask_contact_people
+  - utter_ask_phone
+  - utter_ask_address
+  - utter_ask_other_address
+  - utter_ask_buy_date
+  - utter_ask_buy_place
+  - utter_ask_buy_date_place
+  - utter_ask_house_age
+  - utter_ask_helpmore
+  - utter_goodbye
