@@ -1,0 +1,2540 @@
+﻿{
+  "rasa_nlu_data": {
+    "entity_synonyms": [
+      {
+        "value": "送到了",
+        "synonyms": [
+                    "送到家了",
+                    "到家了",
+                    "到了"
+        ]
+      },
+      {
+        "value": "有挂架",
+        "synonyms": [
+                    "挂架,我们有",
+                    "有架子",
+                    "挂架。我们有"
+        ]
+      },
+      {
+        "value": "开通了",
+        "synonyms": [
+                    "有信号",
+                    "有电视信号",
+                    "电视信号开通了",
+                    "开通",
+                    "开通的",
+                    "装着",
+                    "有网络"
+        ]
+      },
+      {
+        "value": "安装电视",
+        "synonyms": [
+                    "装电视",
+                    "安装",
+                    "装"
+        ]
+      },
+      {
+        "value": "桌上",
+        "synonyms": [
+                    "桌子上",
+                    "放在桌上",
+                    "放桌上",
+                    "桌面"
+        ]
+      },
+      {
+        "value": "简易固定型",
+        "synonyms": [
+                    "简易",
+                    "固定",
+                    "固定性",
+                    "固定型",
+                    "210",
+                    "两百一"
+        ]
+      },
+      {
+        "value": "伸缩调节型",
+        "synonyms": [
+                    "伸缩",
+                    "调节",
+                    "调节型",
+                    "伸缩型",
+                    "550",
+                    "五百五"
+        ]
+      },
+      {
+        "value": "老房子",
+        "synonyms": [
+                    "老房子",
+                    "旧房子"
+        ]
+      }
+    ],
+    "regex_features": [
+      {
+        "pattern": ".+省",
+        "name": "province_entity"
+      },
+      {
+        "pattern": ".+自治州",
+        "name": "autonomous_prefecture_entity"
+      },
+      {
+        "pattern": ".+市",
+        "name": "city_entity"
+      },
+      {
+        "pattern": ".+区",
+        "name": "district_entity"
+      },
+      {
+        "pattern": ".+号楼|.+栋",
+        "name": "building_entity"
+      },
+      {
+        "pattern": ".+单元",
+        "name": "unit_entity"
+      },
+      {
+        "pattern": "(?!.+号楼).+楼",
+        "name": "floor_entity"
+      },
+      {
+        "pattern": ".+侧",
+        "name": "side_entity"
+      },
+      {
+        "pattern": ".+街|.+路",
+        "name": "road_entity"
+      },
+      {
+        "pattern": ".+号",
+        "name": "road_number_entity"
+      },
+      {
+        "pattern": "李|王|张|刘|陈|杨|赵|黄|周|吴|徐|孙|胡|朱|高|林|何|郭|马|罗|梁|宋|郑|谢|韩|唐|冯|于|董|萧|程|曹|袁|邓|许|傅|沈|曾|彭|吕|苏|卢|蒋|蔡|贾|丁|魏|薛|叶|阎|余|潘|杜|戴|夏|钟|汪|田|任|姜|范|方|石|姚|谭|廖|邹|熊|金|陆|郝|孔|白|崔|康|毛|邱|秦|江|史|顾|侯|邵|孟|龙|万|段|漕|钱|汤|尹|黎|易|常|武|乔|贺|赖|龚|文|庞|樊|兰|殷|施|陶|洪|翟|安|颜|倪|严|牛|温|芦|季|俞|章|鲁|葛|伍|韦|申|尤|毕|聂|丛|焦|向|柳|邢|路|岳|齐|沿|梅|莫|庄|辛|管|祝|左|涂|谷|祁|时|舒|耿|牟|卜|路|詹|关|苗|凌|费|纪|靳|盛|童|欧|甄|项|曲|成|游|阳|裴|席|卫|查|屈|鲍|位|覃|霍|翁|隋|植|甘|景|薄|单|包|司|柏|宁|柯|阮|桂|闵|欧阳|解|强|柴|华|车|冉|房|边|辜|吉|饶|刁|瞿|戚|丘|古|米|池|滕|晋|苑|邬|臧|畅|宫|来|嵺|苟|全|褚|廉|简|娄|盖|符|奚|木|穆|党|燕|郎|邸|冀|谈|姬|屠|连|郜|晏|栾|郁|商|蒙|计|喻|揭|窦|迟|宇|敖|糜|鄢|冷|卓|花|仇|艾|蓝|都|巩|稽|井|练|仲|乐|虞|卞|封|竺|冼|原|官|衣|楚|佟|栗|匡|宗|应|台|巫|鞠|僧|桑|荆|谌|银|扬|明|沙|薄|伏|岑|习|胥|保|和|蔺",
+        "name": "name_entity"
+      },
+      {
+        "pattern": "^[0-9]{1,11}$",
+        "name": "phone"
+      },
+      {
+        "pattern": "^LCD-[A-Za-z0-9]+$",
+        "name": "model"
+      },
+      {
+        "pattern": "有.*信号|开通|开(通)?了|装着|有网络",
+        "name": "signal"
+      },
+      {
+        "pattern": "(安)?装",
+        "name": "install"
+      },
+      {
+        "pattern": "(送)?到(家)?了",
+        "name": "tohome"
+      },
+      {
+        "pattern": ".*有.*",
+        "name": "hanger"
+      },
+      {
+        "pattern": ".*桌.*|.*墙.*",
+        "name": "install_place"
+      },
+      {
+        "pattern": "伸缩|调节|550|五百五|简易|固定|210|两百一",
+        "name": "install_wall_type"
+      }
+    ],
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "你好",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "你好啊",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "你好吗",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "hello",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "hi",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "早上好",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "晚上好",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "greet",
+        "text": "嗨",
+        "entities": [
+        ]
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "是的"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "是"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "对的"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "确实"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "好"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "好的"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "对的"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "好滴"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "affirm",
+        "text": "好啊"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "goodbye",
+        "text": "再见",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "goodbye",
+        "text": "拜拜",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "goodbye",
+        "text": "下次见",
+        "entities": [
+        ]
+      },
+      {
+        "entities": [
+        ],
+        "intent": "thankyou",
+        "text": "谢谢你"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "thankyou",
+        "text": "谢谢"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "thankyou",
+        "text": "感谢"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "不是"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "不"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "不是这样的"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "错了"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "没有了"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "没有"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "不用"
+      },
+      {
+        "entities": [
+        ],
+        "intent": "deny",
+        "text": "不用了"
+      },
+      {
+        "intent": "inform",
+        "text": "没有外在音响",
+        "entities": [
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "那个我我买了一台电视，但是现在就货已经送到了，我想跟你们订一下那个安装",
+        "entities": [
+          {
+            "end": 22,
+            "entity": "tohome",
+            "start": 19,
+            "value": "送到了"
+          },
+          {
+            "end": 35,
+            "entity": "install",
+            "start": 33,
+            "value": "安装"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "购买的日期应该是周二，那天周二十几个星期一号一号",
+        "entities": [
+          {
+            "end": 10,
+            "entity": "date",
+            "start": 8,
+            "value": "周二"
+          },
+          {
+            "end": 15,
+            "entity": "date",
+            "start": 13,
+            "value": "周二"
+          },
+          {
+            "end": 21,
+            "entity": "date",
+            "start": 18,
+            "value": "星期一"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "210的",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_wall_type",
+            "start": 0,
+            "value": "210"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "江西省九江市庐山区,然后琵琶坪,然后2栋3单元1301",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "江西省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "九江市"
+          },
+          {
+            "end": 9,
+            "entity": "district",
+            "start": 6,
+            "value": "庐山区"
+          },
+          {
+            "end": 15,
+            "entity": "community",
+            "start": 12,
+            "value": "琵琶坪"
+          },
+          {
+            "end": 20,
+            "entity": "building",
+            "start": 18,
+            "value": "2栋"
+          },
+          {
+            "end": 23,
+            "entity": "unit",
+            "start": 20,
+            "value": "3单元"
+          },
+          {
+            "end": 27,
+            "entity": "room",
+            "start": 23,
+            "value": "1301"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "八月6号",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "date",
+            "start": 0,
+            "value": "8/6"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "啊噢装着呢.",
+        "entities": [
+          {
+            "start": 2,
+            "end": 4,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "唉呀,我说不好，嗯应该是50吋，我说不好",
+        "entities": [
+          {
+            "end": 14,
+            "entity": "size",
+            "start": 12,
+            "value": "50"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "简易固定性的",
+        "entities": [
+          {
+            "end": 5,
+            "entity": "install_wall_type",
+            "start": 0,
+            "value": "简易固定型"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "伸缩调节的",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "install_wall_type",
+            "start": 0,
+            "value": "伸缩调节型"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "嗯河北省唐山市丰润区,啊嗯七小区52号楼2单元401",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "province",
+            "start": 1,
+            "value": "河北省"
+          },
+          {
+            "end": 7,
+            "entity": "city",
+            "start": 4,
+            "value": "唐山市"
+          },
+          {
+            "end": 10,
+            "entity": "district",
+            "start": 7,
+            "value": "丰润区"
+          },
+          {
+            "end": 16,
+            "entity": "community",
+            "start": 13,
+            "value": "七小区"
+          },
+          {
+            "end": 20,
+            "entity": "building",
+            "start": 16,
+            "value": "52号楼"
+          },
+          {
+            "end": 23,
+            "entity": "unit",
+            "start": 20,
+            "value": "2单元"
+          },
+          {
+            "end": 26,
+            "entity": "room",
+            "start": 23,
+            "value": "401"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "挂架,我们有的",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "有挂架",
+            "entity": "hanger"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我们已经有挂架了",
+        "entities": [
+          {
+            "start": 4,
+            "end": 7,
+            "value": "有挂架",
+            "entity": "hanger"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "上海市闵行区，就是益梅路,是路口的，唉益梅路证西路口,紫滕一村4号402",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "city",
+            "start": 0,
+            "value": "上海市"
+          },
+          {
+            "end": 6,
+            "entity": "district",
+            "start": 3,
+            "value": "闵行区"
+          },
+          {
+            "end": 12,
+            "entity": "road",
+            "start": 9,
+            "value": "益梅路"
+          },
+          {
+            "end": 22,
+            "entity": "road",
+            "start": 19,
+            "value": "益梅路"
+          },
+          {
+            "end": 25,
+            "entity": "road",
+            "start": 22,
+            "value": "证西路"
+          },
+          {
+            "end": 31,
+            "entity": "village",
+            "start": 27,
+            "value": "紫滕一村"
+          },
+          {
+            "end": 33,
+            "entity": "road",
+            "start": 31,
+            "value": "4号"
+          },
+          {
+            "end": 36,
+            "entity": "room",
+            "start": 33,
+            "value": "402"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "噢在京东买的",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "buy_place",
+            "start": 2,
+            "value": "京东"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我有架子",
+        "entities": [
+          {
+            "start": 1,
+            "end": 4,
+            "value": "有挂架",
+            "entity": "hanger"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "挂架。我们有的",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "有挂架",
+            "entity": "hanger"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我有后面有架子的",
+        "entities": [
+          {
+            "start": 4,
+            "end": 7,
+            "value": "有挂架",
+            "entity": "hanger"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "江苏省泰州市海陵区，然后是新泰路街道，然后是锦东花苑34-4",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "江苏省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "泰州市"
+          },
+          {
+            "end": 9,
+            "entity": "district",
+            "start": 6,
+            "value": "海陵区"
+          },
+          {
+            "end": 18,
+            "entity": "road",
+            "start": 13,
+            "value": "新泰路街道"
+          },
+          {
+            "end": 26,
+            "entity": "community",
+            "start": 22,
+            "value": "锦东花苑"
+          },
+          {
+            "end": 30,
+            "entity": "room",
+            "start": 26,
+            "value": "34-4"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓吴，口天吴",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "吴"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "吴"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓刘，文刀刘",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "刘"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "刘"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓张，弓长张",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "张"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "张"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓林，双木林",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "林"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "林"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓陈，耳东陈",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "陈"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "陈"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓李，木子李",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "李"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "李"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓章，立早章",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "章"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "章"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓吕，双口吕",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "吕"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "吕"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓王，三横王",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "王"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "王"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓胡，古月胡",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "胡"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "胡"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓杨，木易杨",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "杨"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "杨"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓许，言午许",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "许"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "许"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓姜，美女姜",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "姜"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "姜"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓嵩，山高嵩",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "嵩"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "嵩"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓松，木公松",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "松"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "松"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓江，水工江",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "江"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "江"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓姜，羊女姜",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "姜"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "姜"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓黄，草头黄",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "黄"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "黄"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓徐，双人徐",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "徐"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "徐"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓杜，木土杜",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "杜"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "杜"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓于，干钩于",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "于"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "于"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓孙，子小孙",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "孙"
+          },
+          {
+            "end": 7,
+            "entity": "name",
+            "start": 4,
+            "value": "孙"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "啊两百一的那种",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "install_wall_type",
+            "start": 1,
+            "value": "210"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "五百五的",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_wall_type",
+            "start": 0,
+            "value": "550"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "江苏省启东市,嗯新安镇,对,新旧的新,安全的安, 新安镇,嗯四大队,然后是10小队",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "江苏省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "启东市"
+          },
+          {
+            "end": 11,
+            "entity": "town",
+            "start": 8,
+            "value": "新安镇"
+          },
+          {
+            "end": 28,
+            "entity": "town",
+            "start": 25,
+            "value": "新安镇"
+          },
+          {
+            "end": 33,
+            "entity": "address_other",
+            "start": 30,
+            "value": "四大队"
+          },
+          {
+            "end": 41,
+            "entity": "address_other",
+            "start": 37,
+            "value": "10小队"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "嗯前几天在启东文峰大世界购买的",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "buy_place",
+            "start": 5,
+            "value": "启东文峰大世界"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓戴,戴帽子的戴",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "戴"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "上海的,黄埔區西藏南路1200弄3号",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "city",
+            "start": 0,
+            "value": "上海"
+          },
+          {
+            "end": 7,
+            "entity": "district",
+            "start": 4,
+            "value": "黄埔區"
+          },
+          {
+            "end": 11,
+            "entity": "road",
+            "start": 7,
+            "value": "西藏南路"
+          },
+          {
+            "end": 16,
+            "entity": "lane",
+            "start": 11,
+            "value": "1200弄"
+          },
+          {
+            "end": 18,
+            "entity": "road",
+            "start": 16,
+            "value": "3号"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "贵姓杨",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "杨"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我免贵姓董",
+        "entities": [
+          {
+            "end": 5,
+            "entity": "name",
+            "start": 4,
+            "value": "董"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "噢在网上买的",
+        "entities": [
+          {
+            "end": 4,
+            "entity": "buy_place",
+            "start": 2,
+            "value": "网上"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "吉林省长春市,高新技术开发区,東地天瀾小区,对大地的地,对对对,瀾是三点水加个门那个那个,呃九九栋,噢一单元,1102",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "吉林省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "长春市"
+          },
+          {
+            "end": 14,
+            "entity": "district",
+            "start": 7,
+            "value": "高新技术开发区"
+          },
+          {
+            "end": 21,
+            "entity": "community",
+            "start": 15,
+            "value": "東地天瀾小区"
+          },
+          {
+            "end": 49,
+            "entity": "building",
+            "start": 47,
+            "value": "九栋"
+          },
+          {
+            "end": 54,
+            "entity": "unit",
+            "start": 51,
+            "value": "一单元"
+          },
+          {
+            "end": 59,
+            "entity": "room",
+            "start": 55,
+            "value": "1102"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "装电视",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "安装电视",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我要装电视",
+        "entities": [
+          {
+            "start": 2,
+            "end": 5,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我要安装电视",
+        "entities": [
+          {
+            "start": 2,
+            "end": 6,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "装电视。",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "安装电视。",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我要装电视。",
+        "entities": [
+          {
+            "start": 2,
+            "end": 5,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我要安装电视。",
+        "entities": [
+          {
+            "start": 2,
+            "end": 6,
+            "value": "安装电视",
+            "entity": "install"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓黄",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "黄"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓陈",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "陈"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓杨",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "杨"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓李",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "李"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓林",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "林"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓张",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "张"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓黄。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "黄"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓陈。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "陈"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓杨。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "杨"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓李。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "李"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓林。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "林"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我姓张。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "name",
+            "start": 2,
+            "value": "张"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "有电视信号",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "开通了",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "有电视信号。",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "开通了。",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "电视信号开通了",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "电视信号开通了。",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "开通了",
+            "entity": "signal"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "LCD-45SF460A对吧？",
+        "entities": [
+          {
+            "end": 12,
+            "entity": "model",
+            "start": 0,
+            "value": "LCD-45SF460A"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "LCD-58mY8008A",
+        "entities": [
+          {
+            "end": 13,
+            "entity": "model",
+            "start": 0,
+            "value": "LCD-58mY8008A"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "是LCD-45SF460A对吧？",
+        "entities": [
+          {
+            "end": 13,
+            "entity": "model",
+            "start": 1,
+            "value": "LCD-45SF460A"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "LCD-58mY8008A。",
+        "entities": [
+          {
+            "end": 13,
+            "entity": "model",
+            "start": 0,
+            "value": "LCD-58mY8008A"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "是LCD-45SF460A没错吧？",
+        "entities": [
+          {
+            "end": 13,
+            "entity": "model",
+            "start": 1,
+            "value": "LCD-45SF460A"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "45寸",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "45"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "50寸",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "50"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "65寸",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "65"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "70寸",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "70"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "80寸",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "80"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "45寸。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "45"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "50寸。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "50"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "65寸。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "65"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "70寸。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "70"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "80寸。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "size",
+            "start": 0,
+            "value": "80"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "是80寸的。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "size",
+            "start": 1,
+            "value": "80"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "是45寸的电视。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "size",
+            "start": 1,
+            "value": "45"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我的电视是50寸的。",
+        "entities": [
+          {
+            "end": 7,
+            "entity": "size",
+            "start": 5,
+            "value": "50"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "挂墙上",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_place",
+            "start": 1,
+            "value": "墙上"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "放桌上",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_place",
+            "start": 1,
+            "value": "桌上"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "挂墙上。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_place",
+            "start": 1,
+            "value": "墙上"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "放桌上。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "install_place",
+            "start": 1,
+            "value": "桌上"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "明天",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "date",
+            "start": 0,
+            "value": "明天"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "后天",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "date",
+            "start": 0,
+            "value": "后天"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "明天。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "date",
+            "start": 0,
+            "value": "明天"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "后天。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "date",
+            "start": 0,
+            "value": "后天"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我的号码是15834787951。",
+        "entities": [
+          {
+            "end": 16,
+            "entity": "phone",
+            "start": 5,
+            "value": "15834787951"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我的电话是13943887731。",
+        "entities": [
+          {
+            "end": 16,
+            "entity": "phone",
+            "start": 5,
+            "value": "13943887731"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我的电话号码是13943887731。",
+        "entities": [
+          {
+            "end": 18,
+            "entity": "phone",
+            "start": 7,
+            "value": "13943887731"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我住在吉林省延边朝鲜族自治州敦化市北苑社区6号楼四单元四楼西侧。",
+        "entities": [
+          {
+            "end": 6,
+            "entity": "province",
+            "start": 3,
+            "value": "吉林省"
+          },
+          {
+            "end": 14,
+            "entity": "autonomous",
+            "start": 6,
+            "value": "延边朝鲜族自治州"
+          },
+          {
+            "end": 17,
+            "entity": "city",
+            "start": 14,
+            "value": "敦化市"
+          },
+          {
+            "end": 21,
+            "entity": "community",
+            "start": 17,
+            "value": "北苑社区"
+          },
+          {
+            "end": 24,
+            "entity": "building",
+            "start": 21,
+            "value": "6号楼"
+          },
+          {
+            "end": 27,
+            "entity": "unit",
+            "start": 24,
+            "value": "四单元"
+          },
+          {
+            "end": 29,
+            "entity": "floor",
+            "start": 27,
+            "value": "四楼"
+          },
+          {
+            "end": 31,
+            "entity": "side",
+            "start": 29,
+            "value": "西侧"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "广东省深圳市龙岗区东环二路7号3楼",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "广东省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "深圳市"
+          },
+          {
+            "end": 9,
+            "entity": "district",
+            "start": 6,
+            "value": "龙岗区"
+          },
+          {
+            "end": 13,
+            "entity": "road",
+            "start": 9,
+            "value": "东环二路"
+          },
+          {
+            "end": 15,
+            "entity": "road",
+            "start": 13,
+            "value": "7号"
+          },
+          {
+            "end": 17,
+            "entity": "floor",
+            "start": 15,
+            "value": "3楼"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "吉林省松原市宁江区静湖小区30栋3单元302",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "province",
+            "start": 0,
+            "value": "吉林省"
+          },
+          {
+            "end": 6,
+            "entity": "city",
+            "start": 3,
+            "value": "松原市"
+          },
+          {
+            "end": 9,
+            "entity": "district",
+            "start": 6,
+            "value": "宁江区"
+          },
+          {
+            "end": 13,
+            "entity": "community",
+            "start": 9,
+            "value": "静湖小区"
+          },
+          {
+            "end": 16,
+            "entity": "building",
+            "start": 13,
+            "value": "30栋"
+          },
+          {
+            "end": 19,
+            "entity": "unit",
+            "start": 16,
+            "value": "3单元"
+          },
+          {
+            "end": 22,
+            "entity": "room",
+            "start": 19,
+            "value": "302"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我住河南省安阳市文峰区华强城。",
+        "entities": [
+          {
+            "end": 5,
+            "entity": "province",
+            "start": 2,
+            "value": "河南省"
+          },
+          {
+            "end": 8,
+            "entity": "city",
+            "start": 5,
+            "value": "安阳市"
+          },
+          {
+            "end": 11,
+            "entity": "district",
+            "start": 8,
+            "value": "文峰区"
+          },
+          {
+            "end": 14,
+            "entity": "community",
+            "start": 11,
+            "value": "华强城"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我家住在上海市宝山区天馨花园。",
+        "entities": [
+          {
+            "end": 7,
+            "entity": "city",
+            "start": 4,
+            "value": "上海市"
+          },
+          {
+            "end": 10,
+            "entity": "district",
+            "start": 7,
+            "value": "宝山区"
+          },
+          {
+            "end": 14,
+            "entity": "community",
+            "start": 10,
+            "value": "天馨花园"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "我住昆明市盘龙区北辰财富中心。",
+        "entities": [
+          {
+            "end": 5,
+            "entity": "city",
+            "start": 2,
+            "value": "昆明市"
+          },
+          {
+            "end": 8,
+            "entity": "district",
+            "start": 5,
+            "value": "盘龙区"
+          },
+          {
+            "end": 14,
+            "entity": "community",
+            "start": 8,
+            "value": "北辰财富中心"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "地址是广东省珠海市香洲区石花东路123号海湾花园。",
+        "entities": [
+          {
+            "end": 6,
+            "entity": "province",
+            "start": 3,
+            "value": "广东省"
+          },
+          {
+            "end": 9,
+            "entity": "city",
+            "start": 6,
+            "value": "珠海市"
+          },
+          {
+            "end": 12,
+            "entity": "district",
+            "start": 9,
+            "value": "香洲区"
+          },
+          {
+            "end": 16,
+            "entity": "road",
+            "start": 12,
+            "value": "石花东路"
+          },
+          {
+            "end": 20,
+            "entity": "road",
+            "start": 16,
+            "value": "123号"
+          },
+          {
+            "end": 24,
+            "entity": "community",
+            "start": 20,
+            "value": "海湾花园"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "淘宝",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "淘宝"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "京东",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "京东"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "苏宁",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "苏宁"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "国美",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "国美"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "淘宝买的",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "淘宝"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "京东买的",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "京东"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "苏宁买的",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "苏宁"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "国美买的",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "国美"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "淘宝。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "淘宝"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "京东。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "京东"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "苏宁。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "苏宁"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "国美。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "国美"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "淘宝买的。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "淘宝"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "京东买的。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "京东"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "苏宁买的。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "苏宁"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "国美买的。",
+        "entities": [
+          {
+            "end": 2,
+            "entity": "buy_place",
+            "start": 0,
+            "value": "国美"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "老房子",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "老房子"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "旧房子",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "旧房子"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "新房子",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "新房子"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "老房子。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "老房子"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "旧房子。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "旧房子"
+          }
+        ]
+      },
+      {
+        "intent": "inform",
+        "text": "新房子。",
+        "entities": [
+          {
+            "end": 3,
+            "entity": "house",
+            "start": 0,
+            "value": "新房子"
+          }
+        ]
+      }
+    ],
+    "intent_examples": [
+    ],
+    "entity_examples": [
+    ]
+  }
+}
